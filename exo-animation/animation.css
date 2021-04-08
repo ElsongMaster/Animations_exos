@@ -1,7 +1,66 @@
 div {
-  animation: mymove 4s;
+  position: relative;
+  /* animation: mymove 1s; */
+  animation-name: mySquareMove;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  /* animation-fill-mode: forwards;
+  animation-direction: alternate-reverse; */
 }
-@keyframes mymove {
-    from {left: 0px;} /* 0% */
-    to {left: 200px;} /* 100% */
+
+div:hover {
+  animation-play-state: paused;
+}
+
+#bounce-title {
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes myAwsomeMove {
+  from {
+    left: 0;
+  } /* 0% */
+  to {
+    left: 200px;
+  } /* 100% */
+}
+
+@keyframes mySquareMove {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 200px;
+    top: 0;
+  }
+
+  50% {
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    top: 200px;
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes bounce {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 100px;
+  }
 }
