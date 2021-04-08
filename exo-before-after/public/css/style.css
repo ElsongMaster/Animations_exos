@@ -4,7 +4,7 @@ h1 {
   width: max-content;
 }
 
-h1::before {
+#exo1 h1::before {
   content: "";
   height: 3px;
   position: absolute;
@@ -14,16 +14,43 @@ h1::before {
   transition: 2s;
 }
 
-h1:hover::before {
+#exo1 h1:hover::before {
   width: 100%;
 }
 
 /* fin Exo 1 */
 
 /* Exo 2 */
+#exo2 h1::before {
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  background-color: red;
+  transition: 2s;
+  left: 50%;
+}
 
+#exo2 h1:hover::before {
+  left: 0;
+  width: 100%;
+}
 /* fin Exo 2 */
 
 /* Exo 3 */
+#exo3 h1::before {
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: red;
+  transition: 2s;
+  z-index: -1;
+}
 
+#exo3 h1:hover::before {
+  height: 100%;
+}
 /* fin Exo 3 */ ;
