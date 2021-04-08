@@ -1,5 +1,24 @@
 /* Exo 1 */
-#exo1/* fin Exo 1 */
+h1 {
+  position: relative;
+  width: max-content;
+}
+
+h1::before {
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  background-color: red;
+  transition: 2s;
+}
+
+h1:hover::before {
+  width: 100%;
+}
+
+/* fin Exo 1 */
 
 /* Exo 2 */
 
@@ -7,4 +26,4 @@
 
 /* Exo 3 */
 
-/* fin Exo 3 */;
+/* fin Exo 3 */ ;
